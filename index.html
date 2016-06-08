@@ -1,0 +1,55 @@
+<doctype! html>
+<html>
+<head><title>Alan Sax -- Web Development Portfolio</title>
+  <!--scripts begin here -->
+  <link href='style.css' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Inconsolata|Nunito|Josefin+Sans|Questrial' rel='stylesheet' type='text/css'>
+  <script src="https://use.fontawesome.com/cfe0061364.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="script.js"></script>
+  <!--end scripts-->
+</head>
+<body>
+<div class="wrapper fluid-container">
+  <div class="fluid-container center-block case">
+     <!--start of quote box-->
+    <div class="quote-box center-block">
+      <div class="row">
+        <div class="quote-text col-xs-12 text-center hey">
+          <div class="blockquote" id="quote">Failure is only a temporary change in direction to set you straight for your next success.</div>
+          <div class="author" id="author"> — Alan Sax</div>
+        </div>
+      </div>
+     
+      <div class="row button-box">
+        <div class="col-xs-5 text-center"></div>
+         <!-- twitter button-->
+        <div class="col-xs-2 text-center">
+          <button onclick="tweetIt()" type="button" class="btn btn-primary twitter" id="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></button>
+          <script> function tweetIt () {
+			    var quote = document.getElementById('quote').innerText;
+			    var author = document.getElementById('author').innerText;
+			    var tweetUrl = 'https://twitter.com/share?text=' +
+			    encodeURIComponent(quote) + "—" + encodeURIComponent(author) +
+			    '.';
+			    
+			  	window.open(tweetUrl);
+    		}
+        </script>
+         <!--<a class="btn-primary"  id="twitter"
+          href="https://twitter.com/intent/tweet?text=<div>"><i class="fa fa-twitter" aria-hidden="true"></i></a> -->
+        </div>
+      <!--end of tweet button!-->
+        <div class="col-xs-4 text-center">
+          <button type="button" class="next-quote btn btn-primary btn-block">Next Quote</button>
+        </div>
+        <div class="col-xs-1 text-center">
+        </div>
+      </div>
+    </div>
+    <!-- end of quote box-->
+  </div>
+</div>
+</body>
+</html>
